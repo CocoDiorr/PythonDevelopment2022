@@ -1,4 +1,4 @@
-from .gameplay import gameplay
+from .gameplay import *
 import sys
 from urllib.request import urlopen
 
@@ -15,4 +15,4 @@ if __name__ == '__main__':
         l = int(sys.argv[2])
     else:
         l = 5
-    print(gameplay(input, print, [word for word in words if len(word) == l]))
+    print(gameplay(ask, inform, [word for word in words if len(word) == l]))

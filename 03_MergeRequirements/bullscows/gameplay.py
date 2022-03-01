@@ -5,7 +5,7 @@ from typing import List
 def bullscows(guess: str, secret: str) -> (int, int):
     bulls = len(guess) - hamming(guess, secret)
     cows = sorensen_dice(guess, secret) * len(guess)
-    return bulls, cows
+    return bulls, int(cows)
 
 def ask(promt: str, words: List[str] = None) -> str:
     guess = input(promt)
